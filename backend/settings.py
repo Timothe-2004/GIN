@@ -21,7 +21,6 @@ import os
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME] if RENDER_EXTERNAL_HOSTNAME else []
 
-
 # Debugging output to verify settings
 print(f"DEBUG: {DEBUG}")
 print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
@@ -268,3 +267,5 @@ if not os.path.exists(MEDIA_ROOT):
 # Imprimer le chemin du fichier settings chargé
 print(f"Settings loaded from: {__file__}")
 print("***** USING MAIN backend/settings.py FILE *****")
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key')
