@@ -16,7 +16,7 @@ PyJWT>=2.8.0,<2.10.0
 cryptography>=41.0.0,<45.0.0
 
 # Utilitaires
-Pillow>=10.0.0,<10.1.0  # Pour le traitement d'images
+Pillow>=10.0.0,<11.3.0  # Pour le traitement d'images
 pyyaml>=6.0.0,<6.1.0
 uritemplate>=4.1.0,<4.2.0
 pytz>=2023.3
@@ -28,7 +28,7 @@ pytest-cov>=4.1.0,<4.2.0
 coverage>=7.3.0,<7.4.0
 
 # Outils de développement (optionnels)
-black>=23.9.0,<24.0.0
+black>=23.9.0,<26.0.0
 isort>=5.12.0,<6.1.0
 flake8>=6.1.0,<7.0.0
 pylint>=3.0.0,<3.4.0
