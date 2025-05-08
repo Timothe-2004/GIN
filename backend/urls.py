@@ -23,6 +23,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('gin.urls')),  # Redirige la racine vers les URLs de l'application principale
     path('api/', include('gin.urls')),
     path('api/', include('inscription.urls')),
     path('api/stages/', include('stages.urls')),
