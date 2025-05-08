@@ -19,7 +19,7 @@ print(f"DEBUG is set to: {DEBUG}")  # Pour vérifier la valeur réelle de DEBUG
 
 import os
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME] if RENDER_EXTERNAL_HOSTNAME else []
+ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME] if RENDER_EXTERNAL_HOSTNAME else ['globalitnet.onrender.com']
 
 # Debugging output to verify settings
 print(f"DEBUG: {DEBUG}")
