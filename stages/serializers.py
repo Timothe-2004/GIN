@@ -1,7 +1,7 @@
 # Import du module de sérialisation de DRF
 from rest_framework import serializers
 # Import des modèles à sérialiser
-from .models import StageOffer, StageApplication, DomaineStage, DemandeStage
+from .models import StageOffer, StageApplication
 
 class StageOfferSerializer(serializers.ModelSerializer):
     """Sérialiseur pour les offres de stage."""
@@ -44,28 +44,6 @@ class TrackingCodeSerializer(serializers.Serializer):
     """Sérialiseur pour la vérification des codes de suivi."""
     tracking_code = serializers.CharField(max_length=12)
 
-class DomaineStageSerializer(serializers.ModelSerializer):
-    """Sérialiseur pour les domaines de stage."""
-    class Meta:
-        model = DomaineStage
-        fields = ['id', 'nom', 'description']
-
-class DemandeStageSerializer(serializers.ModelSerializer):
-    """Sérialiseur pour les demandes de stage."""
-    domaine_nom = serializers.SerializerMethodField()
-    code_unique = serializers.ReadOnlyField()
-    
-    class Meta:
-        model = DemandeStage
-        fields = [
-            'id', 'code_unique', 'email', 'cv', 'domaine', 'domaine_nom',
-            'requete', 'statut', 'date_demande', 'date_modification'
-        ]
-        read_only_fields = ['code_unique', 'statut', 'date_demande', 'date_modification']
-    
-    def get_domaine_nom(self, obj):
-        return obj.domaine.nom
-
 class VerificationStatutSerializer(serializers.Serializer):
     """
     Sérialiseur pour la vérification du statut d'une demande.
@@ -73,17 +51,3 @@ class VerificationStatutSerializer(serializers.Serializer):
     """
     # Champ pour le code unique de la demande
     code_unique = serializers.UUIDField()
-
-class StatutDemandeSerializer(serializers.ModelSerializer):
-    """
-    Sérialiseur pour l'affichage du statut d'une demande.
-    Version simplifiée du DemandeStageSerializer.
-    """
-    # Champ supplémentaire pour le nom du domaine, en lecture seule
-    domaine_nom = serializers.CharField(source='domaine.nom', read_only=True)
-    
-    class Meta:
-        # Définition du modèle associé
-        model = DemandeStage
-        # Liste des champs à inclure dans la sérialisation
-        fields = ['code_unique', 'email', 'domaine_nom', 'statut', 'date_demande']

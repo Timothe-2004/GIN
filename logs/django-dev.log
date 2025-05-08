@@ -970,3 +970,1567 @@ INFO 2025-05-08 08:01:15,933 autoreload 5796 11636 Watching for file changes wit
 INFO 2025-05-08 08:01:37,769 autoreload 5796 11636 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\serializers.py changed, reloading.
 INFO 2025-05-08 08:01:39,146 autoreload 15956 4856 Watching for file changes with StatReloader
 INFO 2025-05-08 08:02:23,277 autoreload 6992 17848 Watching for file changes with StatReloader
+INFO 2025-05-08 08:34:21,241 autoreload 18824 1856 Watching for file changes with StatReloader
+INFO 2025-05-08 08:34:31,938 basehttp 18824 17020 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-08 08:34:33,051 basehttp 18824 17020 "GET /api/schema/ HTTP/1.1" 200 241137
+INFO 2025-05-08 08:34:39,978 views 18824 11780 Données de requête: {}
+ERROR 2025-05-08 08:34:39,979 views 18824 11780 Erreurs de validation: {'user': [ErrorDetail(string='Ce champ est obligatoire.', code='required')]}
+WARNING 2025-05-08 08:34:39,980 log 18824 11780 Bad Request: /api/register/
+WARNING 2025-05-08 08:34:39,981 basehttp 18824 11780 "POST /api/register/ HTTP/1.1" 400 38
+INFO 2025-05-08 08:34:44,501 views 18824 11780 Données de requête: {}
+ERROR 2025-05-08 08:34:44,504 views 18824 11780 Erreurs de validation: {'user': [ErrorDetail(string='Ce champ est obligatoire.', code='required')]}
+WARNING 2025-05-08 08:34:44,511 log 18824 11780 Bad Request: /api/register/
+WARNING 2025-05-08 08:34:44,514 basehttp 18824 11780 "POST /api/register/ HTTP/1.1" 400 38
+INFO 2025-05-08 08:34:57,890 views 18824 16892 Données de requête: {'user': {'username': 'admin', 'email': 'admin@gmail.com', 'password': 'adminpassword'}, 'telephone': '0123456789', 'adresse': '123 rue exemple'}
+ERROR 2025-05-08 08:34:57,893 views 18824 16892 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-08 08:34:57,957 views 18824 16892 Traceback: Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py", line 58, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1078, in get_fields
+    info = model_meta.get_field_info(model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 39, in get_field_info
+    forward_relations = _get_forward_relationships(opts)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 96, in _get_forward_relationships
+    not field.remote_field.through._meta.auto_created
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_meta'
+
+ERROR 2025-05-08 08:34:57,968 log 18824 16892 Internal Server Error: /api/register/
+ERROR 2025-05-08 08:34:57,969 basehttp 18824 16892 "POST /api/register/ HTTP/1.1" 500 112
+INFO 2025-05-08 08:34:59,934 views 18824 16892 Données de requête: {'user': {'username': 'admin', 'email': 'admin@gmail.com', 'password': 'adminpassword'}, 'telephone': '0123456789', 'adresse': '123 rue exemple'}
+ERROR 2025-05-08 08:34:59,935 views 18824 16892 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-08 08:34:59,937 views 18824 16892 Traceback: Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py", line 58, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1078, in get_fields
+    info = model_meta.get_field_info(model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 39, in get_field_info
+    forward_relations = _get_forward_relationships(opts)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 96, in _get_forward_relationships
+    not field.remote_field.through._meta.auto_created
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_meta'
+
+ERROR 2025-05-08 08:34:59,961 log 18824 16892 Internal Server Error: /api/register/
+ERROR 2025-05-08 08:34:59,969 basehttp 18824 16892 "POST /api/register/ HTTP/1.1" 500 112
+INFO 2025-05-08 08:35:01,571 views 18824 16892 Données de requête: {'user': {'username': 'admin', 'email': 'admin@gmail.com', 'password': 'adminpassword'}, 'telephone': '0123456789', 'adresse': '123 rue exemple'}
+ERROR 2025-05-08 08:35:01,573 views 18824 16892 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-08 08:35:01,575 views 18824 16892 Traceback: Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py", line 58, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1078, in get_fields
+    info = model_meta.get_field_info(model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 39, in get_field_info
+    forward_relations = _get_forward_relationships(opts)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 96, in _get_forward_relationships
+    not field.remote_field.through._meta.auto_created
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_meta'
+
+ERROR 2025-05-08 08:35:01,599 log 18824 16892 Internal Server Error: /api/register/
+ERROR 2025-05-08 08:35:01,600 basehttp 18824 16892 "POST /api/register/ HTTP/1.1" 500 112
+INFO 2025-05-08 08:39:22,517 autoreload 18824 1856 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\serializers.py changed, reloading.
+INFO 2025-05-08 08:39:23,931 autoreload 4504 8560 Watching for file changes with StatReloader
+INFO 2025-05-08 08:42:53,339 autoreload 4504 8560 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\serializers.py changed, reloading.
+INFO 2025-05-08 08:42:54,761 autoreload 12360 10440 Watching for file changes with StatReloader
+ERROR 2025-05-08 08:46:34,025 views 12360 13612 Erreur lors de l'inscription à la formation: no such table: inscription_formation
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: inscription_formation
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py", line 243, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\relations.py", line 155, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\fields.py", line 538, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\relations.py", line 259, in to_internal_value
+    return queryset.get(pk=data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: inscription_formation
+ERROR 2025-05-08 08:46:34,298 log 12360 13612 Internal Server Error: /api/inscription/
+ERROR 2025-05-08 08:46:34,300 basehttp 12360 13612 "POST /api/inscription/ HTTP/1.1" 500 73
+INFO 2025-05-08 09:01:30,514 autoreload 12360 10440 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 09:01:32,124 autoreload 16312 12788 Watching for file changes with StatReloader
+INFO 2025-05-08 09:02:13,050 autoreload 16312 12788 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 09:02:14,695 autoreload 15392 12048 Watching for file changes with StatReloader
+INFO 2025-05-08 09:03:24,492 autoreload 15392 12048 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 09:03:26,519 autoreload 16660 19760 Watching for file changes with StatReloader
+INFO 2025-05-08 09:04:45,182 autoreload 16660 19760 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 09:04:46,945 autoreload 16760 17608 Watching for file changes with StatReloader
+INFO 2025-05-08 09:06:47,885 autoreload 16760 17608 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 09:06:50,760 autoreload 16616 18644 Watching for file changes with StatReloader
+INFO 2025-05-08 10:01:16,779 autoreload 11472 6528 Watching for file changes with StatReloader
+INFO 2025-05-08 10:02:53,830 autoreload 6848 9636 Watching for file changes with StatReloader
+WARNING 2025-05-08 10:03:08,859 log 6848 6280 Not Found: /
+WARNING 2025-05-08 10:03:08,860 basehttp 6848 6280 "GET / HTTP/1.1" 404 3639
+WARNING 2025-05-08 10:03:09,244 log 6848 6280 Not Found: /favicon.ico
+WARNING 2025-05-08 10:03:09,255 basehttp 6848 6280 "GET /favicon.ico HTTP/1.1" 404 3690
+INFO 2025-05-08 10:03:48,980 basehttp 6848 9080 "GET /api/schema/ HTTP/1.1" 200 117045
+WARNING 2025-05-08 10:10:01,375 log 6848 8404 Bad Request: /api/accounts/auth/token/
+WARNING 2025-05-08 10:10:01,376 basehttp 6848 8404 "POST //api/accounts/auth/token/ HTTP/1.1" 400 80
+INFO 2025-05-08 10:13:32,929 autoreload 4736 13520 Watching for file changes with StatReloader
+WARNING 2025-05-08 10:13:53,761 log 4736 4708 Bad Request: /api/accounts/auth/token/
+WARNING 2025-05-08 10:13:53,762 basehttp 4736 4708 "POST /api/accounts/auth/token/ HTTP/1.1" 400 68
+INFO 2025-05-08 10:16:21,836 basehttp 4736 14076 "POST /api/accounts/auth/token/ HTTP/1.1" 200 742
+WARNING 2025-05-08 10:19:56,041 log 4736 272 Bad Request: /api/accounts/auth/users/
+WARNING 2025-05-08 10:19:56,042 basehttp 4736 272 "POST /api/accounts/auth/users/ HTTP/1.1" 400 85
+INFO 2025-05-08 10:23:18,613 basehttp 4736 14376 "POST /api/accounts/auth/users/ HTTP/1.1" 201 34
+INFO 2025-05-08 10:23:52,579 basehttp 4736 14376 "POST /api/accounts/auth/users/ HTTP/1.1" 201 36
+WARNING 2025-05-08 10:30:19,540 log 4736 14528 Unauthorized: /api/formations/
+WARNING 2025-05-08 10:30:19,541 basehttp 4736 14528 "POST //api/formations/ HTTP/1.1" 401 172
+WARNING 2025-05-08 10:32:08,077 log 4736 15212 Unauthorized: /api/accounts/auth/token/refresh/
+WARNING 2025-05-08 10:32:08,077 basehttp 4736 15212 "POST /api/accounts/auth/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-05-08 10:33:32,019 basehttp 4736 1552 "POST /api/accounts/auth/token/ HTTP/1.1" 200 742
+WARNING 2025-05-08 10:34:41,107 log 4736 13604 Unauthorized: /api/formations/
+WARNING 2025-05-08 10:34:41,108 basehttp 4736 13604 "POST /api/formations/ HTTP/1.1" 401 172
+INFO 2025-05-08 10:35:14,774 basehttp 4736 13604 "POST /api/formations/ HTTP/1.1" 201 200
+ERROR 2025-05-08 10:37:54,982 log 4736 3684 Internal Server Error: /api/stages/creer-demande
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/stages/creer-demande/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-05-08 10:37:54,986 basehttp 4736 3684 "POST /api/stages/creer-demande HTTP/1.1" 500 78114
+INFO 2025-05-08 11:08:35,704 autoreload 15108 11844 Watching for file changes with StatReloader
+INFO 2025-05-08 11:08:45,339 basehttp 15108 12952 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:08:45,609 basehttp 15108 12952 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4235
+INFO 2025-05-08 11:08:45,926 basehttp 15108 5232 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2025-05-08 11:08:45,945 basehttp 15108 11368 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-05-08 11:08:45,962 basehttp 15108 12952 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2025-05-08 11:08:45,990 basehttp 15108 2524 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-05-08 11:08:45,993 basehttp 15108 9848 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2025-05-08 11:08:46,075 basehttp 15108 2524 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-05-08 11:08:46,079 basehttp 15108 9848 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-05-08 11:09:06,739 basehttp 15108 9848 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:09:06,807 basehttp 15108 9848 "GET /admin/ HTTP/1.1" 200 7464
+INFO 2025-05-08 11:09:06,894 basehttp 15108 9848 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-05-08 11:09:06,929 basehttp 15108 2524 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-05-08 11:09:06,984 basehttp 15108 9848 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-05-08 11:09:07,152 basehttp 15108 1952 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-05-08 11:09:07,153 basehttp 15108 14600 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-05-08 11:09:19,067 basehttp 15108 9848 "GET /admin/gin/formation/ HTTP/1.1" 200 10993
+INFO 2025-05-08 11:09:19,241 basehttp 15108 9848 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:09:19,373 basehttp 15108 14600 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-05-08 11:09:19,381 basehttp 15108 1952 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-05-08 11:09:19,434 basehttp 15108 7352 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-05-08 11:09:19,449 basehttp 15108 1952 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-05-08 11:09:19,510 basehttp 15108 1952 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2025-05-08 11:09:19,515 basehttp 15108 7352 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2025-05-08 11:09:19,558 basehttp 15108 7352 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-05-08 11:09:19,605 basehttp 15108 14600 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-05-08 11:09:19,708 basehttp 15108 4252 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-05-08 11:09:33,239 basehttp 15108 9848 "GET /admin/gin/service/ HTTP/1.1" 200 8785
+INFO 2025-05-08 11:09:33,304 basehttp 15108 9848 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:09:36,626 basehttp 15108 9848 "GET /admin/gin/formation/ HTTP/1.1" 200 10993
+INFO 2025-05-08 11:09:36,693 basehttp 15108 9848 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:09:39,667 basehttp 15108 9848 "GET /admin/gin/formation/add/ HTTP/1.1" 200 11966
+INFO 2025-05-08 11:09:39,752 basehttp 15108 2524 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:09:39,783 basehttp 15108 11368 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-05-08 11:09:39,785 basehttp 15108 9848 "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2025-05-08 11:09:39,785 basehttp 15108 5232 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-05-08 11:09:39,803 basehttp 15108 12952 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-05-08 11:09:39,879 basehttp 15108 12952 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-05-08 11:09:39,912 basehttp 15108 5232 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2025-05-08 11:09:39,995 basehttp 15108 5232 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-05-08 11:10:02,836 basehttp 15108 5232 "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+INFO 2025-05-08 11:10:15,793 basehttp 15108 5232 "POST /admin/gin/formation/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:10:15,835 basehttp 15108 5232 "GET /admin/gin/formation/ HTTP/1.1" 200 11701
+INFO 2025-05-08 11:10:15,928 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:10:15,985 basehttp 15108 5232 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-05-08 11:10:21,270 basehttp 15108 5232 "GET /admin/gin/formation/2/change/ HTTP/1.1" 200 12321
+INFO 2025-05-08 11:10:21,352 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:10:25,647 basehttp 15108 5232 "GET /admin/gin/service/ HTTP/1.1" 200 8785
+INFO 2025-05-08 11:10:25,715 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:10:33,108 basehttp 15108 5232 "GET /admin/gin/service/add/ HTTP/1.1" 200 9895
+INFO 2025-05-08 11:10:33,172 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:10:51,439 basehttp 15108 5232 "POST /admin/gin/service/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:10:51,468 basehttp 15108 5232 "GET /admin/gin/service/ HTTP/1.1" 200 10579
+INFO 2025-05-08 11:10:51,536 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:11:01,801 basehttp 15108 5232 "GET /admin/accounts/userprofile/ HTTP/1.1" 200 12091
+INFO 2025-05-08 11:11:01,871 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:11:07,970 basehttp 15108 5232 "GET /admin/accounts/user/ HTTP/1.1" 200 13923
+INFO 2025-05-08 11:11:08,056 basehttp 15108 5232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:11:08,087 basehttp 15108 12952 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-05-08 11:11:13,451 basehttp 15108 7740 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20532
+INFO 2025-05-08 11:11:13,575 basehttp 15108 14688 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-05-08 11:11:13,611 basehttp 15108 7740 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:11:14,090 basehttp 15108 7740 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+ERROR 2025-05-08 11:12:32,219 log 15108 3088 Internal Server Error: /admin/accounts/user/add/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1947, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1806, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1858, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1289, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1277, in save_formset
+    formset.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 794, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 957, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 1155, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 767, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 552, in save
+    self.instance.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+ERROR 2025-05-08 11:12:32,367 basehttp 15108 3088 "POST /admin/accounts/user/add/ HTTP/1.1" 500 282127
+INFO 2025-05-08 11:28:45,195 autoreload 15108 11844 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\signals.py changed, reloading.
+INFO 2025-05-08 11:28:47,087 autoreload 16360 13768 Watching for file changes with StatReloader
+INFO 2025-05-08 11:29:02,279 autoreload 16360 13768 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\signals.py changed, reloading.
+INFO 2025-05-08 11:29:03,715 autoreload 12400 2428 Watching for file changes with StatReloader
+INFO 2025-05-08 11:29:07,038 basehttp 12400 5668 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20532
+INFO 2025-05-08 11:29:14,224 basehttp 12400 5668 "POST /admin/accounts/user/add/ HTTP/1.1" 200 20871
+INFO 2025-05-08 11:29:14,293 basehttp 12400 5668 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+ERROR 2025-05-08 11:29:45,661 log 12400 5668 Internal Server Error: /admin/accounts/user/add/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1947, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1806, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1858, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1289, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1277, in save_formset
+    formset.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 794, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 957, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 1155, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 767, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 552, in save
+    self.instance.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+ERROR 2025-05-08 11:29:45,719 basehttp 12400 5668 "POST /admin/accounts/user/add/ HTTP/1.1" 500 282127
+INFO 2025-05-08 11:30:08,531 autoreload 16088 14968 Watching for file changes with StatReloader
+ERROR 2025-05-08 11:30:14,622 log 16088 13296 Internal Server Error: /admin/accounts/user/add/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1947, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1806, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1858, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1289, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1277, in save_formset
+    formset.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 794, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 957, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 1155, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 767, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 552, in save
+    self.instance.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+ERROR 2025-05-08 11:30:14,736 basehttp 16088 13296 "POST /admin/accounts/user/add/ HTTP/1.1" 500 282127
+INFO 2025-05-08 11:30:20,116 basehttp 16088 13296 "POST /admin/accounts/user/add/ HTTP/1.1" 200 20871
+INFO 2025-05-08 11:30:20,212 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:24,989 basehttp 16088 13296 "GET /admin/gin/service/ HTTP/1.1" 200 10352
+INFO 2025-05-08 11:30:25,066 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:27,698 basehttp 16088 13296 "GET /admin/gin/formation/ HTTP/1.1" 200 11474
+INFO 2025-05-08 11:30:27,755 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:29,270 basehttp 16088 13296 "GET /admin/gin/service/ HTTP/1.1" 200 10352
+INFO 2025-05-08 11:30:29,368 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:30,434 basehttp 16088 13296 "GET /admin/gin/formation/ HTTP/1.1" 200 11474
+INFO 2025-05-08 11:30:30,495 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:33,226 basehttp 16088 13296 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20532
+INFO 2025-05-08 11:30:33,290 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:45,030 basehttp 16088 13296 "GET /admin/accounts/userprofile/ HTTP/1.1" 200 12091
+INFO 2025-05-08 11:30:45,106 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:30:51,810 basehttp 16088 13296 "GET /admin/accounts/userprofile/add/ HTTP/1.1" 200 13007
+INFO 2025-05-08 11:30:51,883 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:31:03,997 basehttp 16088 13296 "GET /admin/accounts/user/ HTTP/1.1" 200 13923
+INFO 2025-05-08 11:31:04,074 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:31:11,059 basehttp 16088 13296 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20532
+INFO 2025-05-08 11:31:11,128 basehttp 16088 13296 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+ERROR 2025-05-08 11:31:56,668 log 16088 13296 Internal Server Error: /admin/accounts/user/add/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1947, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1806, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1858, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1289, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1277, in save_formset
+    formset.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 794, in save
+    return self.save_existing_objects(commit) + self.save_new_objects(commit)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 957, in save_new_objects
+    self.new_objects.append(self.save_new(form, commit=commit))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 1155, in save_new
+    return super().save_new(form, commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 767, in save_new
+    return form.save(commit=commit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\forms\models.py", line 552, in save
+    self.instance.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_userprofile.user_id
+ERROR 2025-05-08 11:31:56,736 basehttp 16088 13296 "POST /admin/accounts/user/add/ HTTP/1.1" 500 282019
+INFO 2025-05-08 11:33:42,310 autoreload 16088 14968 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\admin.py changed, reloading.
+INFO 2025-05-08 11:33:43,846 autoreload 10648 14048 Watching for file changes with StatReloader
+INFO 2025-05-08 11:34:30,142 autoreload 10648 14048 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\admin.py changed, reloading.
+INFO 2025-05-08 11:34:31,423 autoreload 7792 12892 Watching for file changes with StatReloader
+INFO 2025-05-08 11:34:42,997 basehttp 7792 14860 "POST /admin/accounts/user/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:34:43,163 basehttp 7792 14860 "GET /admin/accounts/user/4/change/ HTTP/1.1" 200 31786
+INFO 2025-05-08 11:34:43,268 basehttp 7792 14860 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:34:43,451 basehttp 7792 1536 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-05-08 11:34:43,473 basehttp 7792 13512 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15492
+INFO 2025-05-08 11:34:43,645 basehttp 7792 13512 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2025-05-08 11:34:43,672 basehttp 7792 1536 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-05-08 11:34:43,673 basehttp 7792 14860 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO 2025-05-08 11:34:43,719 basehttp 7792 13512 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-05-08 11:34:50,862 basehttp 7792 13512 "GET /admin/accounts/user/ HTTP/1.1" 200 14516
+INFO 2025-05-08 11:34:50,944 basehttp 7792 13512 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:34:58,176 basehttp 7792 13512 "GET /admin/gin/service/ HTTP/1.1" 200 10352
+INFO 2025-05-08 11:34:58,238 basehttp 7792 13512 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:34:59,715 basehttp 7792 13512 "GET /admin/gin/formation/ HTTP/1.1" 200 11474
+INFO 2025-05-08 11:34:59,816 basehttp 7792 13512 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:35:02,669 basehttp 7792 13512 "GET /admin/gin/service/ HTTP/1.1" 200 10352
+INFO 2025-05-08 11:35:02,724 basehttp 7792 13512 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:36:34,325 autoreload 7792 12892 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\realisations\admin.py changed, reloading.
+INFO 2025-05-08 11:36:36,472 autoreload 1116 4464 Watching for file changes with StatReloader
+INFO 2025-05-08 11:36:39,917 autoreload 1116 4464 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\admin.py changed, reloading.
+INFO 2025-05-08 11:36:41,406 autoreload 2376 15564 Watching for file changes with StatReloader
+INFO 2025-05-08 11:36:49,200 autoreload 2376 15564 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 11:36:50,350 autoreload 10284 13568 Watching for file changes with StatReloader
+INFO 2025-05-08 11:37:14,097 autoreload 9720 6740 Watching for file changes with StatReloader
+INFO 2025-05-08 11:38:47,201 autoreload 9720 6740 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 11:38:48,744 autoreload 14268 15856 Watching for file changes with StatReloader
+INFO 2025-05-08 11:38:55,206 autoreload 14268 15856 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 11:38:56,635 autoreload 16212 13256 Watching for file changes with StatReloader
+INFO 2025-05-08 11:39:07,310 basehttp 16212 11904 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-08 11:39:08,002 basehttp 16212 16352 "GET /api/schema/ HTTP/1.1" 200 117045
+INFO 2025-05-08 11:39:08,549 basehttp 16212 11904 "GET /api/schema/ HTTP/1.1" 200 241137
+INFO 2025-05-08 11:39:12,314 basehttp 16212 6232 "GET /admin/gin/service/ HTTP/1.1" 200 13596
+INFO 2025-05-08 11:39:12,396 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:39:19,662 basehttp 16212 6232 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:39:19,766 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:39:25,517 basehttp 16212 6232 "GET /admin/stages/demandestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:39:25,590 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:39:29,012 basehttp 16212 6232 "GET /admin/stages/stageoffer/ HTTP/1.1" 200 11754
+INFO 2025-05-08 11:39:29,083 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:39:32,961 basehttp 16212 6232 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:39:33,048 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+ERROR 2025-05-08 11:39:42,489 log 16212 6232 Internal Server Error: /admin/inscription/inscription/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: inscription_inscription.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 2126, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: inscription_inscription.user_id
+ERROR 2025-05-08 11:39:42,528 basehttp 16212 6232 "GET /admin/inscription/inscription/ HTTP/1.1" 500 187573
+INFO 2025-05-08 11:39:49,786 basehttp 16212 6232 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:39:52,239 basehttp 16212 6232 "GET /admin/partenaires/partenaire/ HTTP/1.1" 200 11754
+INFO 2025-05-08 11:39:52,307 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:39:54,799 basehttp 16212 6232 "GET /admin/partenaires/partenaire/add/ HTTP/1.1" 200 13746
+INFO 2025-05-08 11:39:54,874 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:40:14,378 basehttp 16212 6232 "POST /admin/partenaires/partenaire/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:40:14,407 basehttp 16212 6232 "GET /admin/partenaires/partenaire/ HTTP/1.1" 200 13313
+INFO 2025-05-08 11:40:14,475 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:40:18,369 basehttp 16212 6232 "GET /admin/realisations/realisation/ HTTP/1.1" 200 11765
+INFO 2025-05-08 11:40:18,441 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:40:21,008 basehttp 16212 6232 "GET /admin/realisations/realisation/add/ HTTP/1.1" 200 14502
+INFO 2025-05-08 11:40:21,065 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:07,344 basehttp 16212 6232 "POST /admin/realisations/realisation/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:41:07,426 basehttp 16212 6232 "GET /admin/realisations/realisation/ HTTP/1.1" 200 13436
+INFO 2025-05-08 11:41:07,565 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:11,957 basehttp 16212 6232 "GET /admin/realisations/realisation/1/change/ HTTP/1.1" 200 14925
+INFO 2025-05-08 11:41:12,087 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:26,245 basehttp 16212 6232 "POST /admin/realisations/realisation/1/change/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:41:26,286 basehttp 16212 6232 "GET /admin/realisations/realisation/ HTTP/1.1" 200 13439
+INFO 2025-05-08 11:41:26,368 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:30,383 basehttp 16212 6232 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:41:30,463 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:32,883 basehttp 16212 6232 "GET /admin/stages/stageapplication/add/ HTTP/1.1" 200 18249
+INFO 2025-05-08 11:41:32,970 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:43,035 basehttp 16212 6232 "GET /admin/stages/demandestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:41:43,111 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:41:46,800 basehttp 16212 6232 "GET /admin/stages/demandestage/add/ HTTP/1.1" 200 18158
+INFO 2025-05-08 11:41:46,885 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:42:03,089 basehttp 16212 6232 "GET /admin/stages/domainestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:42:03,160 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:42:05,335 basehttp 16212 6232 "GET /admin/stages/domainestage/add/ HTTP/1.1" 200 13169
+INFO 2025-05-08 11:42:05,393 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+ERROR 2025-05-08 11:42:33,702 log 16212 6232 Internal Server Error: /admin/inscription/inscription/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: inscription_inscription.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 2126, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: inscription_inscription.user_id
+ERROR 2025-05-08 11:42:33,725 basehttp 16212 6232 "GET /admin/inscription/inscription/ HTTP/1.1" 500 187573
+INFO 2025-05-08 11:42:37,840 basehttp 16212 6232 "GET /admin/stages/domainestage/add/ HTTP/1.1" 200 13169
+INFO 2025-05-08 11:43:25,613 basehttp 16212 6232 "GET /admin/stages/demandestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:43:25,696 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:45:30,600 basehttp 16212 6232 "GET /admin/stages/stageoffer/ HTTP/1.1" 200 11754
+INFO 2025-05-08 11:45:30,694 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:45:32,628 basehttp 16212 6232 "GET /admin/stages/stageoffer/add/ HTTP/1.1" 200 20219
+INFO 2025-05-08 11:45:32,708 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:46:09,267 basehttp 16212 6232 "GET /admin/stages/domainestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:46:09,344 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:46:12,456 basehttp 16212 6232 "GET /admin/stages/demandestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:46:12,531 basehttp 16212 6232 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:50:09,877 autoreload 16212 13256 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 11:50:11,654 autoreload 14260 3320 Watching for file changes with StatReloader
+INFO 2025-05-08 11:53:59,022 basehttp 14260 1936 "GET /admin/stages/stageoffer/add/ HTTP/1.1" 200 20219
+INFO 2025-05-08 11:53:59,108 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:54:54,446 basehttp 14260 1936 "POST /admin/stages/stageoffer/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 11:54:54,504 basehttp 14260 1936 "GET /admin/stages/stageoffer/ HTTP/1.1" 200 13348
+INFO 2025-05-08 11:54:54,596 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:55:01,950 basehttp 14260 1936 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:55:02,036 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:55:04,822 basehttp 14260 1936 "GET /admin/stages/stageapplication/add/ HTTP/1.1" 200 18297
+INFO 2025-05-08 11:55:04,893 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:56:09,339 basehttp 14260 1936 "GET /admin/stages/demandestage/ HTTP/1.1" 200 11753
+INFO 2025-05-08 11:56:09,469 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:56:12,035 basehttp 14260 1936 "GET /admin/stages/demandestage/add/ HTTP/1.1" 200 18158
+INFO 2025-05-08 11:56:12,109 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 11:56:29,368 basehttp 14260 1936 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 11796
+INFO 2025-05-08 11:56:29,433 basehttp 14260 1936 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 12:00:48,131 autoreload 14260 3320 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\models.py changed, reloading.
+INFO 2025-05-08 12:00:49,523 autoreload 1424 916 Watching for file changes with StatReloader
+INFO 2025-05-08 12:01:09,795 autoreload 1424 916 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 12:01:11,285 autoreload 9928 13344 Watching for file changes with StatReloader
+INFO 2025-05-08 12:02:06,157 autoreload 9928 13344 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\models.py changed, reloading.
+INFO 2025-05-08 12:02:07,499 autoreload 15384 2524 Watching for file changes with StatReloader
+INFO 2025-05-08 12:02:30,825 autoreload 15384 2524 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\models.py changed, reloading.
+INFO 2025-05-08 12:02:32,281 autoreload 15312 7560 Watching for file changes with StatReloader
+INFO 2025-05-08 12:03:29,821 autoreload 15312 7560 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 12:03:31,182 autoreload 14772 16148 Watching for file changes with StatReloader
+INFO 2025-05-08 13:19:36,751 autoreload 404 6712 Watching for file changes with StatReloader
+INFO 2025-05-08 13:19:45,853 basehttp 404 13704 "GET /api/docs/swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-08 13:19:47,603 basehttp 404 4284 "GET /api/schema/ HTTP/1.1" 200 209737
+INFO 2025-05-08 13:20:55,262 basehttp 404 6128 "GET /api/schema/ HTTP/1.1" 200 101024
+INFO 2025-05-08 13:20:58,296 basehttp 404 12804 "GET /admin/realisations/realisation/add/ HTTP/1.1" 200 12982
+INFO 2025-05-08 13:20:58,436 basehttp 404 12804 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:20:58,436 basehttp 404 11164 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:20:58,457 basehttp 404 2000 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:20:58,461 basehttp 404 15028 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:20:58,490 basehttp 404 15536 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:20:58,506 basehttp 404 15028 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:20:58,509 basehttp 404 15536 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:21:20,915 basehttp 404 16340 "GET /admin/realisations/ HTTP/1.1" 200 5231
+INFO 2025-05-08 13:21:20,988 basehttp 404 16340 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:21:20,992 basehttp 404 14212 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:21:23,177 basehttp 404 14212 "GET /admin/ HTTP/1.1" 200 12223
+INFO 2025-05-08 13:21:41,060 basehttp 404 15132 "GET /redoc/ HTTP/1.1" 200 721
+INFO 2025-05-08 13:21:41,706 basehttp 404 15132 "GET /api/schema/ HTTP/1.1" 200 101024
+WARNING 2025-05-08 13:22:14,923 log 404 9192 Unauthorized: /api/accounts/auth/roles/
+WARNING 2025-05-08 13:22:14,927 basehttp 404 9192 "GET /api/accounts/auth/roles/ HTTP/1.1" 401 10254
+INFO 2025-05-08 13:22:15,453 basehttp 404 6212 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-05-08 13:22:15,469 basehttp 404 13784 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-05-08 13:22:15,481 basehttp 404 9192 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-05-08 13:22:15,501 basehttp 404 9848 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-05-08 13:22:15,751 basehttp 404 14452 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-05-08 13:22:15,768 basehttp 404 6212 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-05-08 13:22:15,778 basehttp 404 9192 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-05-08 13:22:15,779 basehttp 404 13784 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-05-08 13:22:15,831 basehttp 404 11504 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-05-08 13:22:15,868 basehttp 404 14452 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-05-08 13:22:15,878 basehttp 404 9848 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-05-08 13:22:15,941 basehttp 404 6212 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-05-08 13:22:21,949 log 404 5844 Unauthorized: /api/accounts/auth/roles/
+WARNING 2025-05-08 13:22:21,952 basehttp 404 5844 "GET /api/accounts/auth/roles/ HTTP/1.1" 401 10254
+INFO 2025-05-08 13:22:29,634 basehttp 404 5844 "GET /api/accounts/ HTTP/1.1" 200 10367
+INFO 2025-05-08 13:22:32,392 basehttp 404 7616 "OPTIONS /api/accounts/ HTTP/1.1" 200 10454
+WARNING 2025-05-08 13:22:49,199 log 404 14484 Not Found: /
+WARNING 2025-05-08 13:22:49,199 basehttp 404 14484 "GET / HTTP/1.1" 404 3904
+WARNING 2025-05-08 13:23:14,518 log 404 13684 Not Found: /api/api/schema/
+WARNING 2025-05-08 13:23:14,522 basehttp 404 13684 "GET /api/api/schema/ HTTP/1.1" 404 7226
+WARNING 2025-05-08 13:23:19,769 log 404 13684 Not Found: /api/api/schema/
+WARNING 2025-05-08 13:23:19,770 basehttp 404 13684 "GET /api/api/schema/ HTTP/1.1" 404 7226
+WARNING 2025-05-08 13:23:25,181 log 404 4120 Not Found: /api/api/schema/
+WARNING 2025-05-08 13:23:25,182 basehttp 404 4120 "GET /api/api/schema/ HTTP/1.1" 404 7226
+INFO 2025-05-08 13:23:44,159 basehttp 404 412 "GET /api/schema/ HTTP/1.1" 200 101024
+INFO 2025-05-08 13:24:09,657 autoreload 404 6712 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\views.py changed, reloading.
+INFO 2025-05-08 13:24:11,547 autoreload 11028 2632 Watching for file changes with StatReloader
+INFO 2025-05-08 13:24:39,244 basehttp 11028 7884 "GET /admin/accounts/user/ HTTP/1.1" 200 16240
+INFO 2025-05-08 13:24:39,333 basehttp 11028 6140 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:39,344 basehttp 11028 7884 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:24:39,434 basehttp 11028 7884 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:39,436 basehttp 11028 4296 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,039 basehttp 11028 4296 "GET /admin/accounts/user/add/ HTTP/1.1" 200 19135
+INFO 2025-05-08 13:24:47,111 basehttp 11028 4296 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,118 basehttp 11028 6140 "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,124 basehttp 11028 7884 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:24:47,134 basehttp 11028 6140 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,135 basehttp 11028 14608 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,240 basehttp 11028 6140 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:24:47,263 basehttp 11028 14608 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:26:13,357 autoreload 11028 2632 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\admin.py changed, reloading.
+INFO 2025-05-08 13:26:16,100 autoreload 6300 12480 Watching for file changes with StatReloader
+INFO 2025-05-08 13:27:54,842 autoreload 8972 13748 Watching for file changes with StatReloader
+INFO 2025-05-08 13:31:35,901 autoreload 8972 13748 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\contacts\admin.py changed, reloading.
+INFO 2025-05-08 13:31:37,495 autoreload 15756 12464 Watching for file changes with StatReloader
+INFO 2025-05-08 13:32:23,796 autoreload 15756 12464 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\contacts\admin.py changed, reloading.
+INFO 2025-05-08 13:32:25,393 autoreload 16084 780 Watching for file changes with StatReloader
+INFO 2025-05-08 13:32:34,107 basehttp 16084 12128 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20589
+INFO 2025-05-08 13:32:34,204 basehttp 16084 12128 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+ERROR 2025-05-08 13:32:41,891 log 16084 12128 Internal Server Error: /admin/contacts/contactmessage/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: contacts_contactmessage
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1987, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: contacts_contactmessage
+ERROR 2025-05-08 13:32:41,919 basehttp 16084 12128 "GET /admin/contacts/contactmessage/ HTTP/1.1" 500 204677
+INFO 2025-05-08 13:32:46,607 basehttp 16084 12128 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20589
+ERROR 2025-05-08 13:32:48,874 log 16084 12128 Internal Server Error: /admin/contacts/contactmessage/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: contacts_contactmessage
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1987, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: contacts_contactmessage
+ERROR 2025-05-08 13:32:48,905 basehttp 16084 12128 "GET /admin/contacts/contactmessage/ HTTP/1.1" 500 204677
+INFO 2025-05-08 13:33:04,212 basehttp 16084 12128 "GET /admin/accounts/user/add/ HTTP/1.1" 200 20589
+INFO 2025-05-08 13:33:57,230 basehttp 16084 12128 - Broken pipe from ('127.0.0.1', 54158)
+ERROR 2025-05-08 13:33:57,323 log 16084 15796 Internal Server Error: /admin/accounts/user/add/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 121, in add_view
+    return self._add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\admin.py", line 149, in _add_view
+    return super().add_view(request, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1947, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1806, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1857, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\options.py", line 1261, in save_model
+    obj.save()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\base_user.py", line 78, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR 2025-05-08 13:33:57,424 basehttp 16084 15796 "POST /admin/accounts/user/add/ HTTP/1.1" 500 263699
+INFO 2025-05-08 13:37:26,769 autoreload 13220 14784 Watching for file changes with StatReloader
+INFO 2025-05-08 13:37:35,409 basehttp 13220 16188 "POST /admin/accounts/user/add/ HTTP/1.1" 200 20876
+INFO 2025-05-08 13:37:35,500 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:37:53,960 basehttp 13220 16188 "GET /admin/stages/stageapplication/ HTTP/1.1" 200 13598
+INFO 2025-05-08 13:37:54,079 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:37:57,637 basehttp 13220 16188 "POST /admin/accounts/user/add/ HTTP/1.1" 200 20876
+INFO 2025-05-08 13:37:57,704 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:38:10,606 basehttp 13220 16188 "POST /admin/accounts/user/add/ HTTP/1.1" 200 20915
+INFO 2025-05-08 13:38:10,673 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:38:17,093 basehttp 13220 16188 "GET /admin/accounts/user/ HTTP/1.1" 200 18289
+INFO 2025-05-08 13:38:17,173 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:38:26,906 basehttp 13220 16188 "GET /admin/accounts/user/4/change/ HTTP/1.1" 200 34607
+INFO 2025-05-08 13:38:26,984 basehttp 13220 15548 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:38:26,992 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:38:26,992 basehttp 13220 13252 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:38:27,128 basehttp 13220 16188 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-05-08 13:39:02,477 basehttp 13220 16188 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 13674
+INFO 2025-05-08 13:39:02,562 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:39:05,964 basehttp 13220 16188 "GET /admin/contacts/contactmessage/add/ HTTP/1.1" 200 17233
+INFO 2025-05-08 13:39:06,047 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:39:25,036 basehttp 13220 16188 "GET /admin/stages/stageoffer/ HTTP/1.1" 200 15567
+INFO 2025-05-08 13:39:25,118 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:39:27,977 basehttp 13220 16188 "GET /admin/stages/stageoffer/add/ HTTP/1.1" 200 20206
+INFO 2025-05-08 13:39:28,047 basehttp 13220 16188 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+WARNING 2025-05-08 13:44:49,811 log 13220 16072 Not Found: /
+WARNING 2025-05-08 13:44:49,812 basehttp 13220 16072 "GET / HTTP/1.1" 404 3904
+INFO 2025-05-08 13:44:53,368 basehttp 13220 16072 "GET /admin/stages/stageoffer/add/ HTTP/1.1" 200 20206
+INFO 2025-05-08 13:45:05,076 basehttp 13220 16072 "POST /admin/logout/ HTTP/1.1" 200 3630
+INFO 2025-05-08 13:45:08,719 basehttp 13220 16072 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-08 13:45:08,746 basehttp 13220 16072 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4235
+INFO 2025-05-08 13:45:08,823 basehttp 13220 16072 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:45:12,040 basehttp 13220 16072 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-05-08 13:45:12,074 basehttp 13220 16072 "GET /admin/ HTTP/1.1" 200 14525
+INFO 2025-05-08 13:45:25,088 autoreload 13220 14784 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\admin.py changed, reloading.
+INFO 2025-05-08 13:45:26,554 autoreload 16264 14636 Watching for file changes with StatReloader
+INFO 2025-05-08 13:45:31,490 basehttp 16264 6172 "GET /admin/auth/group/ HTTP/1.1" 200 12300
+INFO 2025-05-08 13:45:31,596 basehttp 16264 6172 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:45:34,244 autoreload 16264 14636 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\models.py changed, reloading.
+INFO 2025-05-08 13:45:35,567 autoreload 15440 10284 Watching for file changes with StatReloader
+INFO 2025-05-08 13:45:43,796 basehttp 15440 13588 "GET /admin/accounts/department/ HTTP/1.1" 200 12323
+INFO 2025-05-08 13:45:43,869 basehttp 15440 13588 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:46:15,104 autoreload 15440 10284 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-08 13:46:16,733 autoreload 13668 16340 Watching for file changes with StatReloader
+INFO 2025-05-08 13:49:40,182 basehttp 13668 12588 "GET /admin/accounts/department/ HTTP/1.1" 200 12323
+INFO 2025-05-08 13:49:40,260 basehttp 13668 12588 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:49:45,848 basehttp 13668 12588 "GET /admin/accounts/user/ HTTP/1.1" 200 18603
+INFO 2025-05-08 13:49:45,936 basehttp 13668 12588 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:49:49,771 basehttp 13668 12588 "GET /admin/accounts/user/add/ HTTP/1.1" 200 22972
+INFO 2025-05-08 13:49:49,844 basehttp 13668 12588 "GET /admin/jsi18n/ HTTP/1.1" 200 8985
+INFO 2025-05-08 13:49:50,102 basehttp 13668 12588 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-05-08 13:51:15,004 autoreload 13668 16340 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\models.py changed, reloading.
+INFO 2025-05-08 13:51:16,610 autoreload 14500 6128 Watching for file changes with StatReloader

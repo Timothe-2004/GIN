@@ -7,9 +7,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .models import UserProfile
+from .models import UserProfile, Department
 from .permissions import IsAdminUser, IsOwnerOrAdmin
 from .serializers import UserSerializer, UserProfileSerializer
+from rest_framework import serializers
 
 User = get_user_model()
 
@@ -75,6 +76,22 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+
+    def perform_create(self, serializer):
+        """Override to associate a department with a department head."""
+        user = serializer.save()
+        if user.role == User.Roles.RESPONSABLE_DEPARTEMENT:
+            # Automatically associate the user with a department
+            department_id = self.request.data.get('department_id')
+            if department_id:
+                department = Department.objects.filter(id=department_id).first()
+                if department:
+                    user.department = department
+                    user.save()
+                else:
+                    raise serializers.ValidationError({"department_id": "Invalid department ID."})
+            else:
+                raise serializers.ValidationError({"department_id": "This field is required for department heads."})
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):

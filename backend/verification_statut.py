@@ -4,7 +4,7 @@ from rest_framework.permissions import AllowAny
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample
 from rest_framework import serializers
 from inscription.models import Inscription
-from stages.models import StageApplication, DemandeStage
+from stages.models import StageApplication
 
 class VerificationStatutSerializer(serializers.Serializer):
     """Serializer pour la vérification de statut."""
@@ -33,7 +33,7 @@ class VerificationStatutView(views.APIView):
             200: {
                 "type": "object",
                 "properties": {
-                    "type": {"type": "string", "description": "Type de l'élément trouvé (formation, stage, demande)"},
+                    "type": {"type": "string", "description": "Type de l'élément trouvé (formation, stage)"},
                     "code": {"type": "string", "description": "Code de suivi vérifié"},
                     "statut": {"type": "string", "description": "Statut actuel"},
                     "titre": {"type": "string", "description": "Titre de la formation ou du stage"},
@@ -95,7 +95,6 @@ class VerificationStatutView(views.APIView):
                     "prenom": inscription.prenom
                 })
             except Inscription.DoesNotExist:
-                # Continuer la recherche si type_recherche est 'all'
                 if type_recherche == 'formation':
                     return Response(
                         {"error": "Aucune inscription à une formation trouvée avec ce code"},
@@ -116,24 +115,11 @@ class VerificationStatutView(views.APIView):
                     "prenom": candidature.first_name
                 })
             except StageApplication.DoesNotExist:
-                # Si on n'a pas trouvé, essayer dans les demandes de stage
-                try:
-                    demande = DemandeStage.objects.get(code_unique=code)
-                    return Response({
-                        "type": "demande_stage",
-                        "code": str(demande.code_unique),
-                        "statut": demande.statut,
-                        "titre": f"Demande de stage en {demande.domaine.nom}",
-                        "date": demande.date_demande,
-                        "nom": demande.nom,
-                        "prenom": demande.prenom
-                    })
-                except DemandeStage.DoesNotExist:
-                    if type_recherche == 'stage':
-                        return Response(
-                            {"error": "Aucune candidature ou demande de stage trouvée avec ce code"},
-                            status=status.HTTP_404_NOT_FOUND
-                        )
+                if type_recherche == 'stage':
+                    return Response(
+                        {"error": "Aucune candidature trouvée avec ce code"},
+                        status=status.HTTP_404_NOT_FOUND
+                    )
         
         # Si on arrive ici, c'est qu'on n'a rien trouvé pour le code
         return Response(

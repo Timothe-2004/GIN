@@ -8,6 +8,10 @@ import json
 import uuid
 from django.core.files.uploadedfile import SimpleUploadedFile
 
+# Creating tests for stages module
+# Tests for stage offers and applications (CRUD operations)
+# Tests for views and serializers
+
 class DomaineStageTests(APITestCase):
     def setUp(self):
         self.domaine_url = reverse('domaines-list')

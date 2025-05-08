@@ -89,10 +89,10 @@ class Inscription(models.Model):
         null=True,
         blank=True
     )
-    nom = models.CharField(max_length=100)
-    prenom = models.CharField(max_length=100)
-    email = models.EmailField()
-    telephone = models.CharField(max_length=20)
+    nom = models.CharField(max_length=100)  # Champ obligatoire
+    prenom = models.CharField(max_length=100)  # Champ obligatoire
+    email = models.EmailField()  # Champ obligatoire
+    telephone = models.CharField(max_length=20)  # Champ obligatoire
     commentaire = models.TextField(blank=True)
     tracking_code = models.CharField(max_length=12, unique=True, editable=False)
     statut = models.CharField(

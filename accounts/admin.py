@@ -2,13 +2,21 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from .models import User, UserProfile
+from .models import User, UserProfile, Department
 
 
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
     can_delete = False
     verbose_name_plural = _('profile')
+
+    def has_add_permission(self, request, obj=None):
+        # Empêche l'ajout d'un profil utilisateur si un profil existe déjà
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        # Permet uniquement la modification d'un profil existant
+        return True
 
 
 @admin.register(User)
@@ -19,7 +27,7 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('is_staff', 'is_active', 'role')
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal info'), {'fields': ('first_name', 'last_name', 'role')}),
+        (_('Personal info'), {'fields': ('first_name', 'last_name', 'role', 'department')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
@@ -28,7 +36,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2', 'first_name', 'last_name', 'role'),
+            'fields': ('email', 'password1', 'password2', 'first_name', 'last_name', 'role', 'department'),
         }),
     )
     search_fields = ('email', 'first_name', 'last_name')
@@ -47,3 +55,9 @@ class UserProfileAdmin(admin.ModelAdmin):
     def get_department(self, obj):
         return obj.user.department.name if obj.user.department else None
     get_department.short_description = 'Department'
+
+
+@admin.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description')
+    search_fields = ('name',)

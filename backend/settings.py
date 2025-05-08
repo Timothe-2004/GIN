@@ -11,15 +11,20 @@ from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-SECRET_KEY = 'django-insecure-@_=r4ls@=cke_8&ljf79ua*s__gq_vnxzaonamck#0qdd*h%kc'
-
+# 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Force DEBUG to True for development
-DEBUG = True
+DEBUG = False
 print(f"DEBUG is set to: {DEBUG}")  # Pour vérifier la valeur réelle de DEBUG
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+import os
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME] if RENDER_EXTERNAL_HOSTNAME else []
+
+
+# Debugging output to verify settings
+print(f"DEBUG: {DEBUG}")
+print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
 
 # Application definition
 INSTALLED_APPS = [
@@ -78,7 +83,10 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            'timeout': 20,  # Temps d'attente en secondes pour éviter les erreurs de verrouillage
+        },
     }
 }
 

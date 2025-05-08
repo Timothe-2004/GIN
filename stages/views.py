@@ -6,19 +6,15 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.exceptions import PermissionDenied
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from .models import DomaineStage, DemandeStage, StageOffer, StageApplication
+from .models import StageOffer, StageApplication, APPLICATION_STATUS
 from .serializers import (
-    DomaineStageSerializer, 
-    DemandeStageSerializer,
-    VerificationStatutSerializer,
-    StatutDemandeSerializer,
     StageOfferSerializer, 
     StageApplicationSerializer, 
     TrackingCodeSerializer
 )
 from rest_framework.decorators import action
 from drf_spectacular.utils import extend_schema, extend_schema_view
-from accounts.permissions import IsAdminUser, IsEditorUser, ReadOnly
+from accounts.permissions import IsAdminUser, IsEditorUser, ReadOnly, IsResponsableDepartement
 
 # Create your views here.
 
@@ -55,7 +51,17 @@ class StageOfferViewSet(viewsets.ModelViewSet):
         user = self.request.user
         if user.is_authenticated and (user.is_admin() or user.is_editor()):
             return StageOffer.objects.all()
+        if user.is_authenticated and user.is_responsable_departement():
+            return StageOffer.objects.filter(department=user.department)
         return StageOffer.objects.filter(status='published')
+    
+    def perform_create(self, serializer):
+        """Automatically associate the stage offer with the creator's department."""
+        user = self.request.user
+        if user.is_authenticated and user.is_responsable_departement():
+            serializer.save(department=user.department, created_by=user)
+        else:
+            serializer.save(created_by=user)
     
     @action(detail=True, methods=['post'], permission_classes=[permissions.AllowAny])
     def postuler(self, request, pk=None):
@@ -64,8 +70,14 @@ class StageOfferViewSet(viewsets.ModelViewSet):
         Crée une nouvelle candidature et retourne le code de suivi.
         """
         stage_offer = self.get_object()
+
+        # Vérifier que l'offre est publiée
+        if stage_offer.status != 'published':
+            return Response({
+                'error': 'Vous ne pouvez postuler qu’à des offres publiées.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
         serializer = StageApplicationSerializer(data=request.data)
-        
         if serializer.is_valid():
             # Ajouter l'offre de stage à la candidature
             serializer.save(stage_offer=stage_offer)
@@ -73,7 +85,7 @@ class StageOfferViewSet(viewsets.ModelViewSet):
                 'message': 'Candidature envoyée avec succès',
                 'tracking_code': serializer.instance.tracking_code
             }, status=status.HTTP_201_CREATED)
-        
+
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -92,13 +104,14 @@ class StageApplicationViewSet(viewsets.ModelViewSet):
         user = self.request.user
         if user.is_admin():
             return StageApplication.objects.all()
-        
-        # Pour les éditeurs, filtrer par leurs départements
-        # Note: nécessite d'ajouter un champ département au modèle User
-        # return StageApplication.objects.filter(stage_offer__department=user.department)
-        return StageApplication.objects.all()  # À modifier avec la logique de départements
+
+        if user.is_editor():
+            # Filtrer par département pour les éditeurs
+            return StageApplication.objects.filter(stage_offer__department=user.department)
+
+        return StageApplication.objects.none()  # Aucun accès pour les autres utilisateurs
     
-    @action(detail=True, methods=['patch'])
+    @action(detail=True, methods=['patch'], permission_classes=[IsEditorUser])
     def update_status(self, request, pk=None):
         """Mettre à jour le statut d'une candidature."""
         application = self.get_object()
@@ -151,235 +164,3 @@ class TrackingViewSet(viewsets.ViewSet):
                 )
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class DomaineStageViewSet(viewsets.ModelViewSet):
-    """
-    ViewSet pour gérer les domaines de stage.
-    
-    Permet de lister, créer, modifier et supprimer les domaines de stage.
-    Seuls les utilisateurs authentifiés peuvent effectuer des modifications.
-    """
-    queryset = DomaineStage.objects.all()
-    serializer_class = DomaineStageSerializer
-    
-    def get_permissions(self):
-        """
-        Définit les permissions selon l'action :
-        - Liste et détail : accessible à tous
-        - Création, modification, suppression : utilisateurs authentifiés uniquement
-        """
-        if self.action in ['list', 'retrieve']:
-            return [AllowAny()]
-        return [IsAuthenticated()]
-
-class DemandeStageViewSet(viewsets.ModelViewSet):
-    """
-    ViewSet pour gérer les demandes de stage.
-    
-    Permet de :
-    - Créer une nouvelle demande de stage
-    - Vérifier le statut d'une demande via son code unique
-    - Lister et gérer les demandes (admin uniquement)
-    """
-    serializer_class = DemandeStageSerializer
-    
-    def get_permissions(self):
-        """
-        Définit les permissions selon l'action :
-        - Création et vérification de statut : accessible à tous
-        - Autres actions : utilisateurs authentifiés uniquement
-        """
-        if self.action in ['create', 'verifier_statut']:
-            return [AllowAny()]
-        return [IsAuthenticated()]
-    
-    def get_queryset(self):
-        """
-        Filtrer les demandes selon le rôle de l'utilisateur.
-        """
-        user = self.request.user
-        if user.is_admin():
-            return DemandeStage.objects.all()
-        
-        # Pour les éditeurs, filtrer par leurs départements
-        # Note: nécessite d'ajouter un champ département au modèle User
-        # return DemandeStage.objects.filter(domaine__nom=user.department)
-        return DemandeStage.objects.all()  # À modifier avec la logique de départements
-    
-    @action(detail=False, methods=['post'], permission_classes=[permissions.AllowAny])
-    def verify_status(self, request):
-        """
-        Vérifier le statut d'une demande via son code unique.
-        Accessible publiquement pour permettre aux candidats de vérifier leur statut.
-        """
-        from django.shortcuts import get_object_or_404
-        from rest_framework.exceptions import ValidationError
-        import uuid
-        
-        try:
-            code = request.data.get('code_unique')
-            if not code:
-                return Response({'error': 'Code unique requis'}, status=status.HTTP_400_BAD_REQUEST)
-            
-            try:
-                code_uuid = uuid.UUID(code)
-            except ValueError:
-                return Response({'error': 'Format de code invalide'}, status=status.HTTP_400_BAD_REQUEST)
-            
-            demande = get_object_or_404(DemandeStage, code_unique=code_uuid)
-            
-            return Response({
-                'code_unique': str(demande.code_unique),
-                'domaine': demande.domaine.nom,
-                'statut': demande.statut,
-                'date_demande': demande.date_demande,
-                'date_modification': demande.date_modification
-            })
-            
-        except ValidationError as e:
-            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
-
-    @action(detail=False, methods=['get'])
-    def verifier_statut(self, request):
-        """
-        Vérifie le statut d'une demande de stage via son code unique.
-        
-        Args:
-            request: Requête contenant le paramètre 'code_unique'
-            
-        Returns:
-            Response: Statut de la demande ou message d'erreur
-        """
-        code = request.query_params.get('code_unique')
-        if not code:
-            return Response(
-                {'error': 'Le code unique est requis'},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-            
-        try:
-            demande = DemandeStage.objects.get(code_unique=code)
-            serializer = self.get_serializer(demande)
-            return Response(serializer.data)
-        except DemandeStage.DoesNotExist:
-            return Response(
-                {'error': 'Demande non trouvée'},
-                status=status.HTTP_404_NOT_FOUND
-            )
-
-class DomaineStageListView(generics.ListAPIView):
-    queryset = DomaineStage.objects.all()
-    serializer_class = DomaineStageSerializer
-    permission_classes = [AllowAny]
-
-    @swagger_auto_schema(
-        operation_description="Liste tous les domaines de stage disponibles",
-        responses={
-            200: DomaineStageSerializer(many=True),
-        }
-    )
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
-
-class DemandeStageCreateView(generics.CreateAPIView):
-    queryset = DemandeStage.objects.all()
-    serializer_class = DemandeStageSerializer
-    permission_classes = [AllowAny]
-
-    @swagger_auto_schema(
-        operation_description="Créer une nouvelle demande de stage",
-        request_body=DemandeStageSerializer,
-        responses={
-            201: openapi.Response('Demande créée avec succès', DemandeStageSerializer),
-            400: 'Données invalides'
-        }
-    )
-    def post(self, request, *args, **kwargs):
-        return super().post(request, *args, **kwargs)
-
-class VerificationStatutView(APIView):
-    permission_classes = [AllowAny]
-
-    @swagger_auto_schema(
-        operation_description="Vérifier le statut d'une demande de stage",
-        request_body=VerificationStatutSerializer,
-        responses={
-            200: StatutDemandeSerializer,
-            404: 'Demande non trouvée'
-        }
-    )
-    def post(self, request):
-        serializer = VerificationStatutSerializer(data=request.data)
-        if serializer.is_valid():
-            try:
-                demande = DemandeStage.objects.get(code_unique=serializer.validated_data['code_unique'])
-                return Response(StatutDemandeSerializer(demande).data)
-            except DemandeStage.DoesNotExist:
-                return Response(
-                    {'error': 'Aucune demande trouvée avec ce code'},
-                    status=status.HTTP_404_NOT_FOUND
-                )
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class DemandeStageDetailView(generics.RetrieveUpdateAPIView):
-    queryset = DemandeStage.objects.all()
-    serializer_class = DemandeStageSerializer
-    permission_classes = [IsAuthenticated]
-    lookup_field = 'code_unique'
-
-    def get_permissions(self):
-        if self.request.method in ['PUT', 'PATCH']:
-            return [IsAuthenticated()]
-        return [AllowAny()]
-
-    def check_object_permissions(self, request, obj):
-        if request.method in ['PUT', 'PATCH']:
-            if not request.user.is_staff:
-                raise PermissionDenied("Seuls les administrateurs peuvent modifier le statut des demandes.")
-        return super().check_object_permissions(request, obj)
-
-    @swagger_auto_schema(
-        operation_description="Récupérer ou mettre à jour une demande de stage",
-        responses={
-            200: DemandeStageSerializer,
-            404: 'Demande non trouvée'
-        }
-    )
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
-
-    @swagger_auto_schema(
-        operation_description="Mettre à jour le statut d'une demande de stage",
-        request_body=DemandeStageSerializer,
-        responses={
-            200: DemandeStageSerializer,
-            400: 'Données invalides',
-            403: 'Permission refusée',
-            404: 'Demande non trouvée'
-        }
-    )
-    def patch(self, request, *args, **kwargs):
-        try:
-            instance = self.get_object()
-            self.check_object_permissions(request, instance)
-            
-            if 'statut' in request.data:
-                instance.statut = request.data['statut']
-                instance.save()
-                return Response(self.get_serializer(instance).data)
-            else:
-                return Response(
-                    {'error': 'Le champ statut est requis'},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-        except PermissionDenied as e:
-            return Response(
-                {'error': str(e)},
-                status=status.HTTP_403_FORBIDDEN
-            )
-        except Exception as e:
-            return Response(
-                {'error': str(e)},
-                status=status.HTTP_400_BAD_REQUEST
-            )

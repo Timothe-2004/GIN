@@ -13,11 +13,12 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     Créer ou mettre à jour une instance UserProfile lorsque le modèle User est enregistré.
     """
     if created:
-        UserProfile.objects.create(user=instance)
+        # Créer un profil uniquement si aucun n'existe
+        UserProfile.objects.get_or_create(user=instance)
     else:
-        # Try to update existing profile
+        # Mettre à jour le profil existant
         try:
             instance.profile.save()
         except UserProfile.DoesNotExist:
-            # Create if it doesn't exist
+            # Créer un profil si aucun n'existe
             UserProfile.objects.create(user=instance)
