@@ -37,3 +37,6 @@ bandit>=1.7.5,<1.8.0
 # Documentation OpenAPI
 # Added drf-spectacular for schema generation
 drf-spectacular>=0.26.0,<0.27.0
+
+# Deployment
+gunicorn
