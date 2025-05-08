@@ -1,0 +1,972 @@
+INFO 2025-05-07 14:03:47,947 autoreload 7400 14968 Watching for file changes with StatReloader
+INFO 2025-05-07 14:04:05,524 autoreload 3108 3092 Watching for file changes with StatReloader
+INFO 2025-05-07 14:05:33,907 autoreload 15532 15648 Watching for file changes with StatReloader
+INFO 2025-05-07 14:06:01,535 autoreload 2428 9636 Watching for file changes with StatReloader
+INFO 2025-05-07 14:08:04,475 autoreload 8532 4516 Watching for file changes with StatReloader
+INFO 2025-05-07 14:08:20,534 autoreload 15304 10536 Watching for file changes with StatReloader
+INFO 2025-05-07 14:09:19,099 autoreload 15304 10536 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\backend\settings\base.py changed, reloading.
+INFO 2025-05-07 14:09:20,536 autoreload 14612 12312 Watching for file changes with StatReloader
+INFO 2025-05-07 14:09:58,705 autoreload 14076 13124 Watching for file changes with StatReloader
+INFO 2025-05-07 14:10:30,451 autoreload 14076 13124 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\backend\urls.py changed, reloading.
+INFO 2025-05-07 14:10:31,683 autoreload 5168 2360 Watching for file changes with StatReloader
+INFO 2025-05-07 14:11:15,333 autoreload 2936 14276 Watching for file changes with StatReloader
+INFO 2025-05-07 14:12:55,477 autoreload 2936 14276 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py changed, reloading.
+INFO 2025-05-07 14:12:56,681 autoreload 12224 5756 Watching for file changes with StatReloader
+INFO 2025-05-07 14:13:12,098 autoreload 4424 12312 Watching for file changes with StatReloader
+INFO 2025-05-07 14:17:39,889 autoreload 4424 12312 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\admin.py changed, reloading.
+INFO 2025-05-07 14:17:41,139 autoreload 15980 15764 Watching for file changes with StatReloader
+INFO 2025-05-07 14:18:12,288 autoreload 5340 14800 Watching for file changes with StatReloader
+WARNING 2025-05-07 14:18:29,111 log 5340 16304 Not Found: /
+WARNING 2025-05-07 14:18:29,128 basehttp 5340 16304 "GET / HTTP/1.1" 404 3141
+WARNING 2025-05-07 14:18:29,550 log 5340 5000 Not Found: /favicon.ico
+WARNING 2025-05-07 14:18:29,556 basehttp 5340 5000 "GET /favicon.ico HTTP/1.1" 404 3192
+INFO 2025-05-07 14:18:45,241 basehttp 5340 15392 "GET /admin HTTP/1.1" 301 0
+ERROR 2025-05-07 14:18:45,713 log 5340 2896 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 259, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 228, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 201, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-05-07 14:18:45,766 basehttp 5340 2896 "GET /admin/ HTTP/1.1" 500 213636
+INFO 2025-05-07 14:19:31,715 basehttp 5340 16292 "GET /redoc HTTP/1.1" 301 0
+INFO 2025-05-07 14:19:31,810 basehttp 5340 4336 "GET /redoc/ HTTP/1.1" 200 721
+ERROR 2025-05-07 14:19:33,001 log 5340 4336 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:19:33,040 basehttp 5340 4336 "GET /api/schema/ HTTP/1.1" 500 186513
+INFO 2025-05-07 14:20:56,556 autoreload 5340 14800 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\backend\urls.py changed, reloading.
+INFO 2025-05-07 14:20:57,753 autoreload 15488 1888 Watching for file changes with StatReloader
+WARNING 2025-05-07 14:23:02,326 log 15488 11484 Not Found: /api
+WARNING 2025-05-07 14:23:02,327 basehttp 15488 11484 "GET /api HTTP/1.1" 404 3168
+WARNING 2025-05-07 14:23:15,675 log 15488 12812 Not Found: /api/comptes/
+WARNING 2025-05-07 14:23:15,676 basehttp 15488 12812 "GET /api/comptes/ HTTP/1.1" 404 4657
+INFO 2025-05-07 14:25:44,117 basehttp 15488 11640 "GET /redoc/ HTTP/1.1" 200 721
+ERROR 2025-05-07 14:25:44,722 log 15488 11640 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:25:44,759 basehttp 15488 11640 "GET /api/schema/ HTTP/1.1" 500 186513
+INFO 2025-05-07 14:25:54,143 basehttp 15488 11640 "GET /swagger/ HTTP/1.1" 200 4640
+ERROR 2025-05-07 14:25:56,094 log 15488 11640 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:25:56,123 basehttp 15488 11640 "GET /api/schema/ HTTP/1.1" 500 186532
+ERROR 2025-05-07 14:25:56,291 log 15488 11640 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:25:56,309 basehttp 15488 11640 "GET /api/schema/ HTTP/1.1" 500 186532
+INFO 2025-05-07 14:52:08,010 autoreload 15488 1888 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\stages\views.py changed, reloading.
+INFO 2025-05-07 14:52:10,118 autoreload 15332 10876 Watching for file changes with StatReloader
+INFO 2025-05-07 14:52:16,862 autoreload 15332 10876 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py changed, reloading.
+INFO 2025-05-07 14:52:18,500 autoreload 15084 14012 Watching for file changes with StatReloader
+INFO 2025-05-07 14:54:07,489 basehttp 15084 14884 "GET /swagger/ HTTP/1.1" 200 4640
+ERROR 2025-05-07 14:54:08,107 log 15084 14884 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:54:08,152 basehttp 15084 14884 "GET /api/schema/ HTTP/1.1" 500 186532
+ERROR 2025-05-07 14:54:08,295 log 15084 14884 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:54:08,322 basehttp 15084 14884 "GET /api/schema/ HTTP/1.1" 500 186532
+ERROR 2025-05-07 14:54:19,306 log 15084 13372 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 112, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1397, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1453, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1648, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 949, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\openapi.py", line 1042, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `department` is not valid for model `UserProfile` in `accounts.serializers.UserProfileSerializer`.
+ERROR 2025-05-07 14:54:19,336 basehttp 15084 13372 "GET /api/schema/ HTTP/1.1" 500 186767
+INFO 2025-05-07 14:54:53,596 autoreload 15084 14012 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py changed, reloading.
+INFO 2025-05-07 14:54:54,829 autoreload 13652 13416 Watching for file changes with StatReloader
+INFO 2025-05-07 14:56:38,354 autoreload 13652 13416 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\serializers.py changed, reloading.
+INFO 2025-05-07 14:56:39,602 autoreload 12652 16100 Watching for file changes with StatReloader
+INFO 2025-05-07 15:06:16,910 autoreload 10964 8812 Watching for file changes with StatReloader
+INFO 2025-05-07 15:06:44,616 basehttp 10964 8696 "GET /api/schema/ HTTP/1.1" 200 77065
+INFO 2025-05-07 15:08:00,873 basehttp 10964 1740 "GET /api/schema/ HTTP/1.1" 200 158208
+INFO 2025-05-07 15:32:36,947 basehttp 10964 15644 "GET /redoc/ HTTP/1.1" 200 721
+INFO 2025-05-07 15:32:37,789 basehttp 10964 15644 "GET /api/schema/ HTTP/1.1" 200 77065
+INFO 2025-05-07 15:45:17,068 autoreload 10964 8812 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\accounts\serializers.py changed, reloading.
+INFO 2025-05-07 15:45:18,492 autoreload 15704 15780 Watching for file changes with StatReloader
+INFO 2025-05-07 16:03:46,201 basehttp 15704 8496 "GET /api/schema/ HTTP/1.1" 200 158208
+WARNING 2025-05-07 16:04:25,696 log 15704 8496 Unauthorized: /api/recherche-formation/
+WARNING 2025-05-07 16:04:25,698 basehttp 15704 8496 "POST /api/recherche-formation/ HTTP/1.1" 401 58
+WARNING 2025-05-07 16:04:59,797 log 15704 8496 Unauthorized: /api/recherche-formation/
+WARNING 2025-05-07 16:04:59,834 basehttp 15704 8496 "POST /api/recherche-formation/ HTTP/1.1" 401 58
+WARNING 2025-05-07 16:05:15,999 log 15704 8496 Bad Request: /api/register/
+WARNING 2025-05-07 16:05:16,003 basehttp 15704 8496 "POST /api/register/ HTTP/1.1" 400 38
+WARNING 2025-05-07 16:05:18,286 log 15704 8496 Bad Request: /api/register/
+WARNING 2025-05-07 16:05:18,287 basehttp 15704 8496 "POST /api/register/ HTTP/1.1" 400 38
+WARNING 2025-05-07 16:07:56,034 log 15704 8496 Unauthorized: /api/accounts/auth/roles/
+WARNING 2025-05-07 16:07:56,036 basehttp 15704 8496 "GET /api/accounts/auth/roles/ HTTP/1.1" 401 58
+INFO 2025-05-07 16:27:01,216 autoreload 15704 15780 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\gin\views.py changed, reloading.
+INFO 2025-05-07 16:27:02,673 autoreload 1676 16356 Watching for file changes with StatReloader
+INFO 2025-05-07 16:27:28,458 autoreload 1676 16356 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\gin\urls.py changed, reloading.
+INFO 2025-05-07 16:27:29,823 autoreload 10840 3040 Watching for file changes with StatReloader
+INFO 2025-05-07 16:27:52,434 autoreload 10840 3040 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\gin\urls.py changed, reloading.
+INFO 2025-05-07 16:27:54,053 autoreload 15384 15064 Watching for file changes with StatReloader
+INFO 2025-05-07 16:28:57,844 basehttp 15384 15052 "GET /redoc/ HTTP/1.1" 200 721
+INFO 2025-05-07 16:28:58,816 basehttp 15384 15052 "GET /api/schema/ HTTP/1.1" 200 85691
+INFO 2025-05-07 16:29:05,593 basehttp 15384 15052 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-07 16:29:06,099 basehttp 15384 15052 "GET /api/schema/ HTTP/1.1" 200 176531
+ERROR 2025-05-07 16:29:37,800 log 15384 15960 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 259, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 228, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\admin\sites.py", line 201, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-05-07 16:29:37,827 basehttp 15384 15960 "GET /admin/ HTTP/1.1" 500 213636
+WARNING 2025-05-07 16:29:43,816 log 15384 15960 Not Found: /
+WARNING 2025-05-07 16:29:43,817 basehttp 15384 15960 "GET / HTTP/1.1" 404 3141
+INFO 2025-05-07 16:29:57,165 basehttp 15384 5748 "GET /api/schema/ HTTP/1.1" 200 85691
+INFO 2025-05-07 16:50:11,211 basehttp 15384 1832 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-07 16:50:11,618 basehttp 15384 1832 "GET /api/schema/ HTTP/1.1" 200 176531
+INFO 2025-05-07 16:55:15,180 autoreload 15384 15064 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\backend\urls.py changed, reloading.
+INFO 2025-05-07 16:55:16,643 autoreload 15960 6896 Watching for file changes with StatReloader
+INFO 2025-05-07 16:58:51,369 autoreload 15960 6896 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\gin\views.py changed, reloading.
+INFO 2025-05-07 16:58:52,929 autoreload 14772 10812 Watching for file changes with StatReloader
+INFO 2025-05-07 16:58:59,384 basehttp 14772 15768 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-07 16:58:59,852 basehttp 14772 15768 "GET /api/schema/ HTTP/1.1" 200 234977
+WARNING 2025-05-07 16:59:41,570 log 14772 8532 Not Found: /
+WARNING 2025-05-07 16:59:41,571 basehttp 14772 8532 "GET / HTTP/1.1" 404 3487
+INFO 2025-05-07 16:59:51,580 basehttp 14772 15312 "GET /api/schema HTTP/1.1" 301 0
+INFO 2025-05-07 16:59:52,033 basehttp 14772 8492 "GET /api/schema/ HTTP/1.1" 200 113890
+INFO 2025-05-07 17:04:45,601 autoreload 14772 10812 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\gin\views.py changed, reloading.
+INFO 2025-05-07 17:04:47,107 autoreload 2412 11988 Watching for file changes with StatReloader
+INFO 2025-05-07 17:05:44,096 autoreload 2412 11988 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\partenaires\views.py changed, reloading.
+INFO 2025-05-07 17:05:45,326 autoreload 3096 9192 Watching for file changes with StatReloader
+INFO 2025-05-07 17:06:26,744 autoreload 3096 9192 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\realisations\views.py changed, reloading.
+INFO 2025-05-07 17:06:28,071 autoreload 1292 16012 Watching for file changes with StatReloader
+INFO 2025-05-07 17:08:19,172 autoreload 1292 16012 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\backend\urls.py changed, reloading.
+INFO 2025-05-07 17:08:20,375 autoreload 14364 13524 Watching for file changes with StatReloader
+INFO 2025-05-07 17:10:54,131 basehttp 14364 1684 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-07 17:10:54,678 basehttp 14364 1684 "GET /api/schema/ HTTP/1.1" 200 241137
+ERROR 2025-05-07 17:11:13,554 log 14364 6660 Internal Server Error: /api/formations/
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: gin_formation
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\drf_spectacular\drainage.py", line 193, in wrapped_method
+    return method(self, request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: gin_formation
+ERROR 2025-05-07 17:11:13,589 basehttp 14364 6660 "GET /api/formations/ HTTP/1.1" 500 26800
+WARNING 2025-05-07 17:19:00,600 log 14364 15272 Bad Request: /api/register/
+WARNING 2025-05-07 17:19:00,604 basehttp 14364 15272 "POST /api/register/ HTTP/1.1" 400 38
+ERROR 2025-05-07 17:22:35,052 views 14364 5488 Erreur lors de l'inscription: JSON parse error - Expecting ',' delimiter: line 6 column 1 (char 105)
+ERROR 2025-05-07 17:22:35,053 log 14364 5488 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:22:35,054 basehttp 14364 5488 "POST /api/register/ HTTP/1.1" 500 57
+WARNING 2025-05-07 17:22:53,310 log 14364 5488 Bad Request: /api/register/
+WARNING 2025-05-07 17:22:53,311 basehttp 14364 5488 "POST /api/register/ HTTP/1.1" 400 93
+ERROR 2025-05-07 17:25:19,323 views 14364 14716 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-07 17:25:19,324 log 14364 14716 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:25:19,326 basehttp 14364 14716 "POST /api/register/ HTTP/1.1" 500 57
+ERROR 2025-05-07 17:25:33,498 views 14364 14716 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-07 17:25:33,508 log 14364 14716 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:25:33,509 basehttp 14364 14716 "POST /api/register/ HTTP/1.1" 500 57
+WARNING 2025-05-07 17:26:42,798 log 14364 15764 Bad Request: /api/register/
+WARNING 2025-05-07 17:26:42,800 basehttp 14364 15764 "POST /api/register/ HTTP/1.1" 400 38
+ERROR 2025-05-07 17:27:35,116 views 14364 16380 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-07 17:27:35,117 log 14364 16380 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:27:35,117 basehttp 14364 16380 "POST /api/register/ HTTP/1.1" 500 57
+ERROR 2025-05-07 17:31:06,565 views 14364 15884 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-07 17:31:06,566 log 14364 15884 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:31:06,566 basehttp 14364 15884 "POST /api/register/ HTTP/1.1" 500 57
+ERROR 2025-05-07 17:31:10,196 views 14364 15884 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-07 17:31:10,197 log 14364 15884 Internal Server Error: /api/register/
+ERROR 2025-05-07 17:31:10,198 basehttp 14364 15884 "POST /api/register/ HTTP/1.1" 500 57
+INFO 2025-05-07 17:32:50,582 autoreload 14364 13524 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py changed, reloading.
+INFO 2025-05-07 17:32:52,182 autoreload 13728 2380 Watching for file changes with StatReloader
+INFO 2025-05-08 07:55:32,235 autoreload 18448 11104 Watching for file changes with StatReloader
+INFO 2025-05-08 07:55:42,484 basehttp 18448 3804 "GET /api/schema/ HTTP/1.1" 200 117045
+INFO 2025-05-08 07:55:44,452 basehttp 18448 3804 "GET /api/schema/ HTTP/1.1" 200 241137
+INFO 2025-05-08 07:55:47,073 basehttp 18448 3804 "GET /swagger/ HTTP/1.1" 200 4449
+INFO 2025-05-08 07:55:47,608 basehttp 18448 3804 "GET /api/schema/ HTTP/1.1" 200 241137
+INFO 2025-05-08 07:56:37,957 views 18448 2192 Données de requête: {}
+ERROR 2025-05-08 07:56:37,962 views 18448 2192 Erreurs de validation: {'user': [ErrorDetail(string='Ce champ est obligatoire.', code='required')]}
+WARNING 2025-05-08 07:56:37,963 log 18448 2192 Bad Request: /api/register/
+WARNING 2025-05-08 07:56:37,965 basehttp 18448 2192 "POST /api/register/ HTTP/1.1" 400 38
+INFO 2025-05-08 07:57:22,558 views 18448 19224 Données de requête: {'user': {'username': 'admin', 'email': 'admin@gmail.com', 'password': 'adminpassword'}, 'telephone': '0123456789', 'adresse': '123 rue exemple'}
+ERROR 2025-05-08 07:57:22,559 views 18448 19224 Erreur lors de l'inscription: 'NoneType' object has no attribute '_meta'
+ERROR 2025-05-08 07:57:22,568 views 18448 19224 Traceback: Traceback (most recent call last):
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\views.py", line 58, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\serializers.py", line 1078, in get_fields
+    info = model_meta.get_field_info(model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 39, in get_field_info
+    forward_relations = _get_forward_relationships(opts)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\env\Lib\site-packages\rest_framework\utils\model_meta.py", line 96, in _get_forward_relationships
+    not field.remote_field.through._meta.auto_created
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '_meta'
+
+ERROR 2025-05-08 07:57:22,591 log 18448 19224 Internal Server Error: /api/register/
+ERROR 2025-05-08 07:57:22,592 basehttp 18448 19224 "POST /api/register/ HTTP/1.1" 500 112
+INFO 2025-05-08 07:57:50,182 autoreload 18448 11104 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\realisations\views.py changed, reloading.
+INFO 2025-05-08 07:57:51,633 autoreload 11232 17056 Watching for file changes with StatReloader
+INFO 2025-05-08 08:01:14,171 autoreload 11232 17056 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\serializers.py changed, reloading.
+INFO 2025-05-08 08:01:15,933 autoreload 5796 11636 Watching for file changes with StatReloader
+INFO 2025-05-08 08:01:37,769 autoreload 5796 11636 C:\Users\HOMEKOU\Downloads\Compressed\site_web\django\gin\GIN_backend\inscription\serializers.py changed, reloading.
+INFO 2025-05-08 08:01:39,146 autoreload 15956 4856 Watching for file changes with StatReloader
+INFO 2025-05-08 08:02:23,277 autoreload 6992 17848 Watching for file changes with StatReloader
